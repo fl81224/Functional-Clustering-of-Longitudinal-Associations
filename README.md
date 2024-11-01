@@ -19,8 +19,8 @@ This repository contains code and additional resources supporting our study.
 
 ## 1. Data
 The datasets used in this study are publicly accessible at:
-- [AHRQ](https://www.ahrq.gov/sdoh/index.html)
-- [CDC Atlas](https://www.cdc.gov/dhdsp/maps/atlas/index.htm)
+- [Agency for Healthcare Research and Quality (AHRQ)](https://www.ahrq.gov/sdoh/index.html)
+- [the Interactive Atlas of Heart Disease and Stroke at the CDC (CDC)](https://www.cdc.gov/dhdsp/maps/atlas/index.htm)
 
 ## 2. Code Structure
 ### Overview
