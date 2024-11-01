@@ -15,7 +15,7 @@ If you find our code or methodology useful, please consider citing our work:
 ```
 
 ## Abstract
-This repository contains code and additional resources supporting our study on the clustering algorithms for analyzing longitudinal associations between Social Determinants of Health (SDOH) and stroke mortality.
+This repository contains code and additional resources supporting our study.
 
 ## 1. Data
 The datasets used in this study are publicly accessible at:
