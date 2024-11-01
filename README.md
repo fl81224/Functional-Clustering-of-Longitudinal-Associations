@@ -1,6 +1,6 @@
 # Functional Clustering of Longitudinal Associations
 
-This repository supports the paper **"Functional Clustering for Longitudinal Associations between Social Determinants of Health and Stroke Mortality in the US"** by Fangzhi Luo, Jianbin Tan, Donglan Zhang, Hui Huang, and Ye Shen. The paper is accepted by the *Annals of Applied Statistics* and available at [arXiv:2406.10499](https://arxiv.org/pdf/2406.10499).
+This repository supports the paper **"Functional Clustering for Longitudinal Associations between Social Determinants of Health and Stroke Mortality in the US"** by Fangzhi Luo, Jianbin Tan, Donglan Zhang, Hui Huang, and Ye Shen. The paper is accepted by the *Annals of Applied Statistics* and available at [arXiv:2406.10499](https://arxiv.org/abs/2406.10499).
 
 ## Citation
 If you find our code or methodology useful, please consider citing our work:
