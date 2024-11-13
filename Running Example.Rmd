@@ -1,0 +1,103 @@
+---
+title: "Running Example"
+author: "Fangzhi Luo"
+date: "2024-11-12"
+output: html_document
+---
+# Introduction
+This is a running example to demonstrate the use of the code.
+
+# Loading packages and functions
+```{r}
+library(fda)
+library(Matrix)
+library(foreach)
+library(doParallel)
+library(aricode)
+library(grpreg)
+library(glmnet)
+library(corpcor)
+library(flexmix)
+
+source("./grpreg2/function_grpreg_GXY.R")
+source("./grpreg2/function_grpreg_ortho.R")
+source("./grpreg2/grpreg2.R")
+
+source("./simu/emsimunovs.R")
+source("./simu/emsimuvs.R")
+source("./simu/function_datageneration.R")
+source("./simu/simu_onetime.R")
+source("./simu/simu_onetime_novs.R")
+source("./simu/simu_onetime_vsrp.R")
+source("./simu/othermethod.R")
+```
+
+#Simulation
+## Setting parameters
+```{r}
+max_inner_iter = 1000
+N=180
+p=90
+Rseed=1
+task=1
+numbers=rep(60,3)
+samediff="same"
+inflation = 2
+depTX=0.4
+k_seq=1:4
+save=FALSE
+max_outer_iter=30
+noise=rep(1/12,3)
+```
+
+## Conduct Simulation
+```{r}
+res=simu_onetime(
+  task = task,
+  Rseed = Rseed,
+  noise = noise,
+  N = N,
+  numbers = numbers,
+  p = p,
+  samediff = samediff,
+  inflation = inflation,
+  depTX = depTX,
+  max_outer_iter = max_outer_iter,
+  k_seq = k_seq,
+  save = save
+)
+```
+
+
+
+
+## Analyzing the result
+### Clustering
+The clustering result
+```{r}
+res$res_alpha_select$bestres$res_alpha$Z_new
+```
+The probability of cluster membership (the first five unit)
+```{r}
+res$res_alpha_select$bestres$res_alpha$weights_new[1:5,]
+```
+
+### Variable selection
+```{r}
+variables=which(sapply(res$res_alpha_select$bestres$beta_est,function(x)sum(as.vector(x)^2))!=0)
+variables
+```
+##3 Estimation
+```{r}
+par(mfrow=c(3,3))
+for(vars in variables){
+  for(k in 1:3){
+    plot(res$res_alpha_select$bestres$beta_est[[vars]][,k],type='l',main=paste0("Cluster ",k," Variable ",vars),xlab="Time",ylab="Value")}
+}
+
+
+```
+
+
+
+
