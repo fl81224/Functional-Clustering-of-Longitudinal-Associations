@@ -70,11 +70,12 @@ res <- simu_onetime(
 
 ## Analyzing results
 ### Clustering
-The clustering result
+#### The clustering result
 ```{r}
 res$res_alpha_select$bestres$res_alpha$Z_new
 ```
-The probability of cluster membership (the first five unit)
+
+#### The probability of cluster membership (the first five unit)
 ```{r}
 res$res_alpha_select$bestres$res_alpha$weights_new[1:5,]
 ```
