@@ -46,13 +46,13 @@ simu_onetime = function(task,
   for (k in k_seq) {
     ind = 1
     temp_alpha = list()
-    for (alpha2 in c(1, 0.5, 0.1, 0.01, 0.001)) {
+    for (alpha2 in c(1, 0.1, 0.01)) {
       temp_RP = list()
       
       inflat = 100
       
-      for (lRP_ind in 1:3) {
-        cat("alpha2", alpha2, "LRP", lRP_ind)
+      for (lRP_ind in 1:2) {
+        cat("K=",k," alpha2=", alpha2, " LRP=", lRP_ind, '\n')
         
         weights_init = sigmasq_init = NULL
         
