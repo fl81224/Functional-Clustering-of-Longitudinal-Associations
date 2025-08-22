@@ -6,11 +6,15 @@ This repository supports the paper **"Functional Clustering for Longitudinal Ass
 If you find our code or methodology useful, please consider citing our work:
 
 ```bibtex
-@article{luo2024functional,
-  title={Functional Clustering for Longitudinal Associations between County-Level Social Determinants of Health and Stroke Mortality in the US},
+@article{luo2025functional,
+  title={Functional clustering for longitudinal associations between social determinants of health and stroke mortality in the US},
   author={Luo, Fangzhi and Tan, Jianbin and Zhang, Donglan and Huang, Hui and Shen, Ye},
-  journal={arXiv preprint arXiv:2406.10499},
-  year={2024}
+  journal={The Annals of Applied Statistics},
+  volume={19},
+  number={1},
+  pages={798--820},
+  year={2025},
+  publisher={Institute of Mathematical Statistics}
 }
 ```
 
